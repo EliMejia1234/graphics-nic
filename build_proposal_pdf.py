@@ -291,9 +291,10 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
         [Paragraph("✦ INICIATIVA INSTITUCIONAL · TALENTO CREATIVO URTECHO", tag_hero)],
         [Paragraph("Plataforma Web de Empleabilidad: <i>Graphics Nic</i>", h1_hero)],
         [Paragraph(
-            "Solución tecnológica institucional diseñada para centralizar, proyectar y visibilizar profesionalmente "
-            "los portafolios de estudiantes y egresados de Diseño Gráfico, promoviendo su inserción laboral "
-            "y conectándolos con empresas, emprendimientos e instituciones que demandan servicios creativos.",
+            "Una solución tecnológica institucional, para proyectar "
+            "profesionalmente a técnicos egresados de la carrera en Diseño Gráfico, "
+            "impartida en el centro José Coronel Urtecho con el fin de conectarlos con empresas "
+            "y clientes que buscan servicios de diseño especializado.",
             p_hero
         )]
     ]
@@ -318,7 +319,7 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     meta_right = [
         Paragraph("ELABORADO POR", meta_lbl),
         Paragraph("Cro. Eli Francisco Mejia Ponce", meta_val),
-        Paragraph("Especialista en Diseño Gráfico y Desarrollo de Software<br/>Iniciativa de Innovación Tecnológica Educativa", meta_sub)
+        Paragraph("Docente de la Especialidad Diseño Gráfico y Desarrollo de Software<br/>Iniciativa de Innovación Tecnológica Educativa", meta_sub)
     ]
     meta_table = Table([[meta_left, meta_right]], colWidths=[usable_width/2 - 4, usable_width/2 - 4])
     meta_table.setStyle(TableStyle([
@@ -360,9 +361,9 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
         Paragraph("• <b>Falta de puente directo:</b> No existe un canal institucional central que comunique la oferta de talento del Centro con la demanda del sector productivo.", box_p),
     ]
     col_solucion = [
-        Paragraph("La Solución Institucional (Graphics Nic)", box_title_success),
+        Paragraph("La Solución al Reto Planteado (Graphics Nic)", box_title_success),
         Spacer(1, 2),
-        Paragraph("• <b>Vitrina centralizada oficial:</b> Espacio digital institucional con perfiles y portafolios estandarizados con el respaldo de calidad del Centro Urtecho.", box_p),
+        Paragraph("• <b>Vitrina centralizada oficial:</b> Espacio digital institucional con perfiles y portafolios organizados, desde donde las personas interesadas puedan descubrir los trabajos que han realizado los estudiantes y egresados de la carrera en Diseño Gráfico.", box_p),
         Paragraph("• <b>Navegación por especialidad:</b> Búsqueda ágil y categorizada para que clientes encuentren exactamente el perfil requerido (branding, editorial, empaques).", box_p),
         Paragraph("• <b>Canal de contacto concertado:</b> Vínculo transparente y profesional que facilita contrataciones formales y alianzas con empresas y MIPYMES.", box_p),
     ]
@@ -387,8 +388,8 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     # Section 3: Modelo Operativo de Funcionamiento
     story.append(Paragraph("3. Modelo Operativo de Funcionamiento (4 Pilares)", sec_title))
     story.append(Paragraph(
-        "Graphics Nic se concibe como una experiencia estructurada y segura, diseñada tanto para enaltecer el trabajo "
-        "de los creadores como para brindar una navegación fluida al sector productivo:",
+        "La plataforma se concibe como una vitrina fácil de recorrer, donde cada perfil presentará el trabajo creativo, "
+        "y las personas interesadas pueden encontrar talento según sus necesidades:",
         body_p
     ))
     story.append(Spacer(1, 4))
@@ -396,7 +397,7 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     p1 = [
         Paragraph("<b>01 · Perfil y Portafolio Curado</b>", ParagraphStyle('P1', fontName='Helvetica-Bold', fontSize=8.5, textColor=c_primary)),
         Spacer(1, 2),
-        Paragraph("Cada estudiante o egresado dispone de una ficha profesional que incluye su reseña biográfica, especialidad principal, galería de proyectos evaluados académicamente y enlaces directos a sus redes profesionales (LinkedIn, Behance, WhatsApp de trabajo).", box_p)
+        Paragraph("El estudiante o egresado presentará su portafolio con sus mejores proyectos, sus especialidades y enlaces profesionales.", box_p)
     ]
     p2 = [
         Paragraph("<b>02 · Exploración y Filtro por Áreas</b>", ParagraphStyle('P2', fontName='Helvetica-Bold', fontSize=8.5, textColor=c_primary)),
@@ -406,7 +407,7 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     p3 = [
         Paragraph("<b>03 · Vinculación y Contacto Responsable</b>", ParagraphStyle('P3', fontName='Helvetica-Bold', fontSize=8.5, textColor=c_primary)),
         Spacer(1, 2),
-        Paragraph("La plataforma orienta a canales de contacto previamente aprobados y autorizados por el Centro y cada participante, garantizando la protección de datos personales y promoviendo una intermediación formal, transparente y ética.", box_p)
+        Paragraph("La plataforma contará con un enlace para que los interesados puedan contactar a los estudiantes o egresados de forma directa y autorizada.", box_p)
     ]
     p4 = [
         Paragraph("<b>04 · Métricas y Seguimiento Institucional</b>", ParagraphStyle('P4', fontName='Helvetica-Bold', fontSize=8.5, textColor=c_primary)),
@@ -431,8 +432,7 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     # Section 4: Especialidades Técnicas Contempladas
     story.append(Paragraph("4. Áreas de Especialidad y Aplicaciones en el Mercado", sec_title))
     story.append(Paragraph(
-        "Para responder a la diversidad del tejido productivo, los portafolios se organizarán en cuatro grandes disciplinas "
-        "formativas impartidas en el Centro José Coronel Urtecho:",
+        "Las instituciones podrán revisar los servicios y especialidades de cada egresado, con paneles como los que se detallan a continuación:",
         body_p
     ))
     story.append(Spacer(1, 3))
@@ -611,7 +611,7 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
         Paragraph("____________________________________________", ParagraphStyle('Line1', fontName='Helvetica', fontSize=9, alignment=1, textColor=c_dark)),
         Spacer(1, 3),
         Paragraph("<b>Cro. Eli Francisco Mejia Ponce</b>", ParagraphStyle('Name1', fontName='Helvetica-Bold', fontSize=8.5, alignment=1, textColor=c_dark)),
-        Paragraph("Especialista en Diseño Gráfico y Desarrollo de Software<br/>Proponente de la Iniciativa Tecnológica", ParagraphStyle('Cargo1', fontName='Helvetica', fontSize=7.5, leading=9.5, alignment=1, textColor=c_sub))
+        Paragraph("Docente de la Especialidad Diseño Gráfico y Desarrollo de Software<br/>Proponente de la Iniciativa Tecnológica", ParagraphStyle('Cargo1', fontName='Helvetica', fontSize=7.5, leading=9.5, alignment=1, textColor=c_sub))
     ]
 
     sign_p_alexandra = [
