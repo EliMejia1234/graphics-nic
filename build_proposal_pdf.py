@@ -541,18 +541,16 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     fase1 = [
         Paragraph("<b>FASE 1: PREPARACIÓN</b><br/><font color='#4f46e5'><b>Semanas 1 a 3</b></font>", ParagraphStyle('F1', fontName='Helvetica-Bold', fontSize=8, textColor=c_primary)),
         Spacer(1, 2),
-        Paragraph("• Sesiones de coordinación con la Subdirección Técnico Docente.<br/>"
-                  "• Establecimiento de criterios de selección de obras y estándares visuales.<br/>"
-                  "• Levantamiento de firmas de consentimiento informado y autorización de publicación.<br/>"
-                  "• Homologación de formatos de ficha y datos de contacto.", box_p)
+        Paragraph("• Alineación con la Subdirección Técnico Docente: Reuniones breves para coordinar las expectativas del proyecto y definir los criterios de selección de las obras gráficas..<br/>"
+                  "• Acordar de forma práctica si el piloto incluirá una selección de los trabajos más destacados o la totalidad de los proyectos de la promoción..<br/>"
+                  "• Identificar y coordinar con el área encargada qué redes sociales o medios oficiales del centro se utilizarán para proyectar la plataforma.", box_p)
     ]
     fase2 = [
         Paragraph("<b>FASE 2: PILOTO Y MONTAJE</b><br/><font color='#0d9488'><b>Semanas 4 a 7</b></font>", ParagraphStyle('F2', fontName='Helvetica-Bold', fontSize=8, textColor=c_primary)),
         Spacer(1, 2),
-        Paragraph("• Integración de una cohorte piloto inicial de 15 a 25 portafolios destacados.<br/>"
-                  "• Curaduría y carga de material gráfico en alta fidelidad.<br/>"
-                  "• Pruebas técnicas de velocidad de carga, diseño responsivo y compatibilidad móvil.<br/>"
-                  "• Sesión interna de validación con los docentes del área gráfica.", box_p)
+        Paragraph("• Integrar de 5 a 10 portafolios iniciales de estudiantes destacados que sirvan como muestra de calidad.<br/>"
+                  "• Organizar y subir el material gráfico asegurando una presentación limpia, ordenada y atractiva en la plataforma web.<br/>"
+                  "• Realizar pruebas de funcionamiento junto con los docentes del área gráfica para asegurar que el sitio se vea impecable en celulares y computadoras.<br/>", box_p)
     ]
     fase3 = [
         Paragraph("<b>FASE 3: DIFUSIÓN Y EVALUACIÓN</b><br/><font color='#d97706'><b>Semanas 8 a 10</b></font>", ParagraphStyle('F3', fontName='Helvetica-Bold', fontSize=8, textColor=c_primary)),
@@ -580,9 +578,12 @@ def create_proposal_pdf(output_filename="propuesta_institucional_graphics_nic.pd
     # Section 7: Factibilidad y Seguridad
     story.append(Paragraph("7. Viabilidad Técnica, Legal y de Recursos", sec_title))
     fact_p1 = Paragraph(
-        "<b>Viabilidad Técnica:</b> La plataforma ha sido diseñada bajo estándares web modernos, ligeros y de código abierto "
-        "(HTML5 semántico, CSS3 responsivo y JavaScript puro). No requiere licencias propietarias ni infraestructura compleja de servidores, "
-        "garantizando un despliegue inmediato con costos operativos nulos para la institución.",
+        "<b>Viabilidad Técnica y Escalabilidad:</b> La plataforma está construida con una arquitectura web moderna y desacoplada. "
+        "Utiliza un frontend responsivo basado en estándares web optimizados, conectado a una base de datos en la nube y servicios "
+        "de backend gestionados a través de <b>Supabase</b>, lo que permite una gestión segura de perfiles y portafolios de egresados. "
+        "El despliegue continuo se realiza mediante <b>Vercel</b>, garantizando alta disponibilidad, velocidad de carga óptima y "
+        "estándares de seguridad actuales, todo ello operando sobre servicios en la nube gratuitos o de bajo costo operativo sin requerir "
+        "licencias propietarias ni infraestructura de servidores físicos locales para la institución.",
         body_p
     )
     fact_p2 = Paragraph(
