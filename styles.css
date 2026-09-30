@@ -117,6 +117,19 @@
             background: var(--lime);
             color: var(--ink);
         }
+
+        .button-outline {
+            background: white;
+            color: var(--ink);
+            border: 1.5px solid #dcd4fb;
+        }
+
+        .button-outline:hover {
+            background: var(--purple-pale);
+            color: var(--purple-dark);
+            border-color: var(--purple-main);
+            box-shadow: 0 8px 20px rgba(110, 86, 207, 0.15);
+        }
     
         .button svg {
             width: 17px;
@@ -229,13 +242,46 @@
     
         .document-badge {
             flex: 0 0 auto;
-            padding: 9px 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 14px;
             border: 1px solid #dcd4fb;
             border-radius: 12px;
             background: var(--purple-pale);
             color: var(--purple-dark);
-            font-size: .68rem;
+            font-size: .74rem;
             font-weight: 800;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+
+        .document-badge:hover,
+        .document-badge:focus-visible {
+            background: var(--purple-main);
+            color: #ffffff;
+            border-color: var(--purple-main);
+            box-shadow: 0 6px 16px rgba(110, 86, 207, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .document-badge svg {
+            width: 15px;
+            height: 15px;
+            transition: transform .2s ease;
+        }
+
+        .document-badge:hover svg {
+            transform: translateY(1px);
+        }
+
+        .nav-download-link {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            font-weight: 800 !important;
+            color: var(--purple-dark) !important;
         }
     
         .presentation-section {
