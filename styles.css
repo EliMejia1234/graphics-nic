@@ -244,36 +244,63 @@
             flex: 0 0 auto;
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            padding: 8px 14px;
-            border: 1px solid #dcd4fb;
-            border-radius: 12px;
-            background: var(--purple-pale);
-            color: var(--purple-dark);
-            font-size: .74rem;
+            gap: 8px;
+            padding: 9px 18px;
+            border-radius: 999px;
+            background: var(--purple-main);
+            color: #ffffff !important;
+            font-size: .8rem;
             font-weight: 800;
             text-decoration: none;
             cursor: pointer;
+            box-shadow: 0 4px 14px rgba(110, 86, 207, 0.35);
             transition: all .2s ease;
         }
 
         .document-badge:hover,
         .document-badge:focus-visible {
-            background: var(--purple-main);
-            color: #ffffff;
-            border-color: var(--purple-main);
-            box-shadow: 0 6px 16px rgba(110, 86, 207, 0.25);
-            transform: translateY(-1px);
+            background: var(--purple-dark);
+            color: #ffffff !important;
+            box-shadow: 0 6px 20px rgba(110, 86, 207, 0.5);
+            transform: translateY(-2px);
         }
 
         .document-badge svg {
-            width: 15px;
-            height: 15px;
+            width: 16px;
+            height: 16px;
             transition: transform .2s ease;
         }
 
         .document-badge:hover svg {
-            transform: translateY(1px);
+            transform: translateY(2px);
+        }
+
+        .presentation-download {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+            padding-top: 16px;
+            border-top: 1px dashed #dcd4fb;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button-download-full {
+            min-height: 48px;
+            background: var(--purple-main);
+            color: #ffffff !important;
+            font-size: .88rem;
+            font-weight: 800;
+            padding: 10px 22px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(110, 86, 207, 0.3);
+            text-decoration: none;
+        }
+
+        .button-download-full:hover {
+            background: var(--purple-dark);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(110, 86, 207, 0.45);
         }
 
         .nav-download-link {
@@ -1096,7 +1123,8 @@
     
         @media (max-width: 940px) {
             .document-badge {
-                display: none;
+                padding: 7px 13px;
+                font-size: .72rem;
             }
     
             .model-grid,
